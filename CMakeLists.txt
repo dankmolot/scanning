@@ -1,6 +1,6 @@
 string(TOLOWER ${CMAKE_SYSTEM_NAME} PLATFORM_SUFFIX)
 
-add_library(garrysmod_scanning STATIC source/${PLATFORM_SUFFIX}/symbolfinder.cpp)
+add_library(garrysmod_scanning STATIC EXCLUDE_FROM_ALL source/${PLATFORM_SUFFIX}/symbolfinder.cpp)
 add_library(gmod::scanning ALIAS garrysmod_scanning)
 
 target_include_directories(garrysmod_scanning PUBLIC include)
