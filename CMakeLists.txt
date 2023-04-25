@@ -1,4 +1,7 @@
 string(TOLOWER ${CMAKE_SYSTEM_NAME} PLATFORM_SUFFIX)
+if(${PLATFORM_SUFFIX} STREQUAL "darwin")
+    SET(PLATFORM_SUFFIX "macosx")
+endif()
 
 add_library(garrysmod_scanning STATIC EXCLUDE_FROM_ALL source/${PLATFORM_SUFFIX}/symbolfinder.cpp)
 add_library(gmod::scanning ALIAS garrysmod_scanning)
