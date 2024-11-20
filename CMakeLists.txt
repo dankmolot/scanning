@@ -11,5 +11,3 @@ target_include_directories(garrysmod_scanning PRIVATE include/scanning)
 target_link_libraries(garrysmod_scanning ${CMAKE_DL_LIBS})
 set_target_properties(garrysmod_scanning PROPERTIES FOLDER "garrysmod")
 
-# Let everyone know that scanning was included
-set(SCANNING_FOUND TRUE CACHE INTERNAL "SCANNING_FOUND")
